@@ -1,0 +1,70 @@
+# ── Environnement Python ──────────────────────────────
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+
+# ── Variables d'environnement (NE JAMAIS committer) ──
+.env
+
+# ── Base de données ───────────────────────────────────
+*.db
+*.sqlite
+*.sqlite3
+
+# ── Fichiers uploadés par les utilisateurs ────────────
+backend/uploads/
+backend/faiss_indexes/
+
+# ── Tests ─────────────────────────────────────────────
+.pytest_cache/
+test_documind.db
+
+# ── Frontend ──────────────────────────────────────────
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+# ── IDE ───────────────────────────────────────────────
+.idea/
+.vscode/
+*.iml
+
+# ── OS ────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+```
+
+---
+
+**2 — Crée le fichier `.env.example` à la racine :**
+```
+GROQ_API_KEY=your_groq_api_key_here
+SECRET_KEY=your_secret_key_here
+```
+
+---
+
+**3 — Crée le fichier `backend/requirements.txt` :**
+```
+fastapi
+uvicorn[standard]
+python-jose[cryptography]
+passlib[bcrypt]
+python-multipart
+PyMuPDF
+python-docx
+pytesseract
+pillow
+sentence-transformers
+faiss-cpu
+reportlab
+requests
+python-dotenv
+argon2-cffi
+pytest
+pytest-asyncio
+httpx
